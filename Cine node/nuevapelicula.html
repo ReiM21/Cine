@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>Starlight Cinema</title>
+    <link rel="stylesheet" href="css/nuevapelicula.css">
+  </head>
+  <body>
+
+    <div class="wrapper">
+  <div class="contact-form">
+    <div class="input-fields">
+      <input type="text" class="input" placeholder="Nombre" id="nombre"/>
+      <input type="number" class="input" placeholder="Duración" id="duracion"/>
+      <input type="text" class="input" placeholder="Género" id="genero"/>
+      <input type="text" class="input" placeholder="Idioma audio" id="idioma_audio"/>
+      <input type="text" class="input" placeholder="Idioma subitulado" id="idioma_subtitulado"/>
+      <input type="text" class="input" placeholder="Clasificación" id="clasificacion"/>
+      <input type="number" class="input" placeholder="Precio" id="precio"/>
+      <input type="number" class="input" placeholder="Hora inicio" id="hora_inicio"/>
+      <input type="date" class="input" placeholder="Fecha" id="fecha"/>
+      <input type="number" class="input" placeholder="Minuto inicio" id="minuto_inicio"/>
+      <input type="file" class="input" placeholder="Imagen" id="imagen"/>
+      <select class="input" id="select">
+        <option>Estado</option>
+        <option value="1">Activo</option>
+        <option value="0">Inactivo</option>
+      </select>
+    </div>
+
+    <div class="msg">
+      <input placeholder="Sinopsis" id="textarea" class="sinopsis"/>
+      <button type="button" class="button" id="button" onclick="botonguardarclick()">Guardar</button>
+    </div>
+  </div>
+</div>
+
+    <div id="fondo">
+
+    </div>
+
+
+
+
+
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script src="frontend/prueba.js"></script>
+
+
+  </body>
+</html>
