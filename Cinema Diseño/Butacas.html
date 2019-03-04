@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>Butacas</title>
+    <link rel="stylesheet" href="css/butacas.css">
+  </head>
+  <body onload="cargardatosdelapelicula()">
+    <div class="todo">
+
+
+
+    <div id="contenedor1">
+      <span id="header">
+        <h1 id="titulodelapelicula"></h1>
+      </div>
+      <div id="datos">
+        <span id="datos1"></span>
+        <span id="datos2"></span>
+     </div>
+
+
+    <div id="contenedor">
+      <div id="contenedor-butacas">
+        <div id="contenedor-asientos1">
+          <div class="fila">  <!-- Fila H -->
+            <div class="butaca" id="h1" onclick="nombre('H1')"><p>H1</p></div>
+            <div class="butaca" id="h2" onclick="nombre('H2')"><p>H2</p></div>
+            <div class="butaca" id="h3" onclick="nombre('H3')"><p>H3</p></div>
+            <div class="butaca" id="h4" onclick="nombre('H4')"><p>H4</p></div>
+          </div>
+          <div class="fila">  <!-- Fila G -->
+            <div class="butaca" id="g1" onclick="nombre('G1')"><p>G1</p></div>
+            <div class="butaca" id="g2" onclick="nombre('G2')"><p>G2</p></div>
+            <div class="butaca" id="g3" onclick="nombre('G3')"><p>G3</p></div>
+            <div class="butaca" id="g4" onclick="nombre('G4')"><p>G4</p></div>
+          </div>
+          <div class="fila">  <!-- Fila F -->
+            <div class="butaca" id="f1" onclick="nombre('F1')"><p>F1</p></div>
+            <div class="butaca" id="f2" onclick="nombre('F2')"><p>F2</p></div>
+            <div class="butaca" id="f3" onclick="nombre('F3')"><p>F3</p></div>
+            <div class="butaca" id="f4" onclick="nombre('F4')"><p>F4</p></div>
+          </div>
+          <div class="fila">  <!-- Fila E -->
+            <div class="butaca" id="e1" onclick="nombre(E1)"><p>E1</p></div>
+            <div class="butaca" id="e2" onclick="nombre('E2')"><p>E2</p></div>
+            <div class="butaca" id="e3" onclick="nombre('E3')"><p>E3</p></div>
+            <div class="butaca" id="e4" onclick="nombre('E4')"><p>E4</p></div>
+          </div>
+          <div class="fila">  <!-- Fila D -->
+            <div class="butaca" id="d1" onclick="nombre('D1')"><p>D1</p></div>
+            <div class="butaca" id="d2" onclick="nombre('D2')"><p>D2</p></div>
+            <div class="butaca" id="d3" onclick="nombre('D3')"><p>D3</p></div>
+            <div class="butaca" id="d4" onclick="nombre('D4')"><p>D4</p></div>
+
+          </div>
+          <div class="fila">  <!-- Fila C -->
+            <div class="butaca" id="c1" onclick="nombre('C1')" ><p>C1</p></div>
+            <div class="butaca" id="c2" onclick="nombre('C2')"><p>C2</p></div>
+            <div class="butaca" id="c3" onclick="nombre('C3')"><p>C3</p></div>
+            <div class="butaca" id="c4" onclick="nombre('C4')"><p>C4</p></div>
+          </div>
+          <div class="fila">  <!-- Fila B -->
+            <div class="butaca" id="b1" onclick="nombre('B1')"><p>B1</p></div>
+            <div class="butaca" id="b2" onclick="nombre('B2')"><p>B2</p></div>
+            <div class="butaca" id="b3" onclick="nombre('B3')"><p>B3</p></div>
+            <div class="butaca" id="b4" onclick="nombre('B4')"><p>B4</p></div>
+          </div>
+          <div class="fila">  <!-- Fila A -->
+            <div class="butaca" id="a1" onclick="nombre('A1')"><p>A1</p></div>
+            <div class="butaca" id="a2" onclick="nombre('A2')"><p>A2</p></div>
+            <div class="butaca" id="a3" onclick="nombre('A3')"><p>A3</p></div>
+            <div class="butaca" id="a4" onclick="nombre('A4')"><p>A4</p></div>
+          </div>
+      </div>  <!-- Contenedor asientos1 -->
+      <div id="contenedor-asientos2">
+        <div class="fila">  <!-- Fila D -->
+          <div class="butaca" id="d5"><p>D5</p></div>
+          <div class="butaca" id="invisible"></div>
+        </div>
+        <div class="fila">  <!-- Fila C -->
+          <div class="butaca" id="c5"><p>C5</p></div>
+          <div class="butaca" id="c6"><p>C6</p></div>
+        </div>
+        <div class="fila">  <!-- Fila B -->
+          <div class="butaca" id="b5"><p>B5</p></div>
+          <div class="butaca" id="b6"><p>B6</p></div>
+        </div>
+        <div class="fila">  <!-- Fila A -->
+          <div class="butaca" id="a5"><p>A5</p></div>
+          <div class="butaca" id="a6"><p>A6</p></div>
+        </div>
+      </div>  <!-- Contenedor asientos2 -->
+      </div>
+      <div id="contenedor-pantalla">
+        <p>PANTALLA</p>
+      </div>
+
+      <div id="pasillo">
+        <p>Pasillo</p>
+      </div>
+    </div>
+  </div>
+    <div id="Popup" class="invisible">
+      <button type="button" id="salir">X</button>
+      <div id="form">
+      <h1 id="titulo"></h1>
+      <h2>Nombre</h2><input type="text" id="nombre_estudiante" placeholder="Nombre">
+      <h2>Carne</h2><input type="text" id="carne_estudiante" placeholder="Carne">
+      <h2>Seccion</h2><input type="text" id="seccion_estudiante" placeholder="Seccion">
+      <button type="button" id="Guardar" onclick="cargardatosdelabutaca()">Guardar</button>
+    </div>
+  </div>
+    <script src="jquery/jquery-3.2.1.min.js"></script>
+    <script src="frontend/prueba.js"></script>
+    <script type="text/javascript">
+    function nombre(x){
+      document.getElementById("titulo").innerHTML=x;
+
+    }
+    function cargardatosdelapelicula()
+    {
+      var pelicula= JSON.parse(localStorage.getItem('peliculaseleccionada'))
+      document.getElementById("titulodelapelicula").innerHTML +=pelicula[0].nombre;
+      document.getElementById("datos1").innerHTML += "<hr><p><Tanda: "+pelicula[0].fecha;
+      document.getElementById("datos2").innerHTML += "Inicia: "+pelicula[0].hora_inicio+": "+pelicula[0].minuto_inicio+"<p/>";
+
+    }
+    function cargardatosdelabutaca()
+
+    {
+     var yay=document.getElementById('titulo').innerHTML
+        var peliculaencache = JSON.parse(localStorage.getItem('peliculaseleccionada'))
+    switch(yay)
+    {
+      case "A1":
+peliculaencache[0].asientos.a1.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.a1.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.a1.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "A2":
+peliculaencache[0].asientos.a2.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.a2.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.a2.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "A3":
+peliculaencache[0].asientos.a3.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.a3.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.a3.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "A4":
+peliculaencache[0].asientos.a4.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.a4.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.a4.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "A5":
+peliculaencache[0].asientos.a5.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.a5.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.a5.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "A6":
+peliculaencache[0].asientos.a6.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.a6.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.a6.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "B1":
+peliculaencache[0].asientos.b1.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.b1.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.b1.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "B2":
+peliculaencache[0].asientos.b2.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.b2.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.b2.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "B3":
+peliculaencache[0].asientos.b3.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.b3.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.b3.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "B4":
+peliculaencache[0].asientos.b4.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.b4.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.b4.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "B5":
+peliculaencache[0].asientos.b5.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.b5.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.b5.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "B6":
+peliculaencache[0].asientos.b6.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.b6.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.b6.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "C1":
+peliculaencache[0].asientos.c1.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.c1.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.c1.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "C2":
+peliculaencache[0].asientos.c2.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.c2.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.c2.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "C3":
+peliculaencache[0].asientos.c3.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.c3.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.c3.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "C4":
+peliculaencache[0].asientos.c4.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.c4.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.c4.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "C5":
+peliculaencache[0].asientos.c5.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.c5.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.c5.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "C6":
+peliculaencache[0].asientos.c6.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.c6.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.c6.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "D1":
+peliculaencache[0].asientos.d1.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.d1.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.d1.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "D2":
+peliculaencache[0].asientos.d2.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.d2.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.d2.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "D3":
+peliculaencache[0].asientos.d3.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.d3.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.d3.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "D4":
+peliculaencache[0].asientos.d4.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.d4.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.d4.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "D5":
+peliculaencache[0].asientos.d5.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.d5.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.d5.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "E1":
+peliculaencache[0].asientos.e1.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.e1.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.e1.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "E2":
+peliculaencache[0].asientos.e2.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.e2.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.e2.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "E3":
+peliculaencache[0].asientos.e3.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.e3.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.e3.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "E4":
+peliculaencache[0].asientos.e4.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.e4.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.e4.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "F1":
+peliculaencache[0].asientos.f1.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.f1.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.f1.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "F2":
+peliculaencache[0].asientos.f2.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.f2.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.f2.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "F3":
+peliculaencache[0].asientos.f3.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.f3.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.f3.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "F4":
+peliculaencache[0].asientos.f4.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.f4.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.f4.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "G1":
+peliculaencache[0].asientos.g1.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.g1.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.g1.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "G2":
+peliculaencache[0].asientos.g2.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.g2.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.g2.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "G3":
+peliculaencache[0].asientos.g3.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.g3.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.g3.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "G4":
+peliculaencache[0].asientos.g4.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.g4.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.g4.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "H1":
+peliculaencache[0].asientos.h1.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.h1.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.h1.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "H2":
+peliculaencache[0].asientos.h2.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.h2.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.h2.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "H3":
+peliculaencache[0].asientos.h3.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.h3.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.h3.seccion= document.getElementById("seccion_estudiante").value;
+break;
+case "H4":
+peliculaencache[0].asientos.h4.nombre_estudiante= document.getElementById("nombre_estudiante").value;
+peliculaencache[0].asientos.h4.carne= document.getElementById("carne_estudiante").value;
+peliculaencache[0].asientos.h4.seccion= document.getElementById("seccion_estudiante").value;
+break;
+
+
+    }
+
+
+    //deben tener linkeado el js de peliculafrontend
+    var peliculainstanciada = new Pelicula(peliculaencache[0]._id,
+      peliculaencache[0].nombre,
+    peliculaencache[0].duracion_minutos,
+    peliculaencache[0].genero,
+    peliculaencache[0].idioma_audio,
+    peliculaencache[0].idioma_subtitulado,
+    peliculaencache[0].sinopsis,
+    peliculaencache[0].clasificacion,
+    peliculaencache[0].precio,
+    peliculaencache[0].hora_inicio,
+    peliculaencache[0].fecha,
+    peliculaencache[0].minuto_inicio,
+    peliculaencache[0].asientos,
+    peliculaencache[0].imagen,
+    peliculaencache[0].estado
+
+    )
+
+    peliculainstanciada.Modificar().then(function(response) {
+  console.log("Success!", response);
+            alert("Butaca ha sido reservada campeón");
+
+}, function(error) {
+  console.error("Failed!", error);
+             alert("Error " + error);
+
+});
+
+
+}
+    $(".butaca").click(function(){
+     $(".todo").addClass('off');
+     $("#Popup").addClass('on');
+     $("#Popup").removeClass('invisible');
+    });
+
+    $("#salir").click(function(){
+     $(".todo").removeClass('off');
+     $("#Popup").removeClass('on');
+     $("#Popup").addClass('invisible');
+    });
+    </script>
+  </body>
+</html>

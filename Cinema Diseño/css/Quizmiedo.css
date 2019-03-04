@@ -1,0 +1,149 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+  margin: 0;
+background: url("../Imagenes/coti1.png");
+  }
+  .contenidos{
+  	padding:20px;
+    margin: auto;
+  	background: pink;
+  	border: solid 1px silver;
+  	width:90%;
+  	border-radius: 10px;
+  	color: black;
+  	margin-top: 250px;
+
+	  }
+h2{
+	margin-left: 37%;
+	font-size:50px;
+}
+  #pie{
+	background:black;
+	clear:both;
+	color:#fff;
+}
+#pie{
+	margin-top: 200px;
+}
+
+nav{
+	display:block;
+		width:100%;
+		background:#ccc;
+		top:0;
+}
+
+header nav{
+	width:100%;
+	margin:0px auto;
+	background:black;
+	padding:10px;
+}
+.menu_bar{
+	display:none;
+}
+header nav ul{
+	list-style:none;
+	margin-left:350px;
+}
+.children{
+	margin-left:0px;
+}
+header nav ul li{
+	display:inline-block;
+	position:relative;
+}
+header nav ul li a{
+	color:#fff;
+	font-size: 30px;
+	padding:20px;
+	display:block;
+	text-decoration:none;
+}
+header nav ul li span{
+	margin-right:15px;
+}
+header nav ul li a:hover{
+	background:#037e8c;
+}
+p{
+	margin-top:10px;
+}
+header nav ul li:hover .children{
+	display:block;
+}
+header nav ul li .children{
+	display:none;
+	background:#011826;
+	position:absolute;
+	width:150%;
+	z-index:1000;
+}
+header nav ul li .children li{
+	display:block;
+}
+header nav ul li .children li a{
+	display:block;
+}
+header nav ul li .caret{
+	position:relative;
+	top:3px;
+	margin-left:10px;
+	margin-right:0px;
+}
+@media screen and (max-width:800px){
+	body{
+		padding-top:30px;
+	}
+	header nav{
+		margin-top:70px;
+		width:70%;
+		height:90%;
+		left:-100%;
+		position:fixed;
+	}
+	header nav ul{
+	margin-left:5px;
+}
+	header nav ul li{
+		display:block;
+		float:none;
+		border-bottom:1px solid rgba(255,255,255, .3);
+
+	}
+	header nav ul li a{
+		display:block;
+	}
+	header nav ul li .children{
+		width:100%;
+		position:relative;
+	}
+	header nav ul li .caret{
+		float:right;
+	}
+	.menu_bar{
+		display:block;
+		width:100%;
+		background:#ccc;
+		position:fixed;
+		top:0;
+	}
+	.menu_bar .bt_menu{
+		display:block;
+		padding:20px;
+		background:#440202;
+		color:#fff;
+		text-decoration:none;
+		font-weight:bold;
+		font-size:25px;
+	}
+	.menu_bar span{
+		float:right;
+		font-size:40px;
+	}
+}
