@@ -26,7 +26,7 @@ return new Promise(function(resolve, reject) {  //  Promesa
 try {
 
        var xhr = new XMLHttpRequest();
-xhr.open('POST', 'http://localhost:8080/api/Nuevapelicula');  //  Abre el link con al atributo nueva pelicula
+xhr.open('POST', 'http://localhost:8080/api/nuevoadmin');  //  Abre el link con al atributo nueva pelicula
 xhr.setRequestHeader('Content-Type', 'application/json'); //  Formato JSON
 xhr.onload = function() {
 if (xhr.status === 200) {
@@ -153,18 +153,6 @@ reject(err.message);
 
 }
 
-
-
-
-}
-catch(err) {
-reject(err.message);
-
-}
-});
-
-
-}
 
 Seleccionarporid() {  //  Las mismas cosas que guardar pero cambia el link al atributo seleccionarporid
 

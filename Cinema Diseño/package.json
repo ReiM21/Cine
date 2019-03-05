@@ -6,6 +6,7 @@
   "author": "Miguel de Cervantes",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "crypto": "^1.0.1",
     "express": "^3.21.2",
     "mongoose": "~4.13.7",
     "multer": "~0.1.6",

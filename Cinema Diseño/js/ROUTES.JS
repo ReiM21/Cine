@@ -1,4 +1,5 @@
 var controllerpelicula = require('./controllerpelicula.js');
+var controllerAdministrador = require('./controlleradministrador.js');
 
 module.exports = function(app) {
   var clasepelicula = new controllerpelicula(); //  Muestra el response segun el request del usuario

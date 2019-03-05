@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="user" class="label">Correo</label>
+					<input id="correo" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Contraseña</label>
+					<input id="contra1" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Sign In">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<a href="#forgot">Olvidaste la contraseña?</a>
+				</div>
+			</div>
+    <script src="jquery/jquery-3.2.1.min.js"></script>
+    <script src="frontend/administradorFE.js"></script>
+    <script type="text/javascript">
+    function cargataquilla()
+        {
+
+
+             let claseadministradorinstanciada = new ADMINISTRADOR(0,"","contra1",document.getElementById('correo'),"","","");
+               claseadministradorinstanciada.Login().then(function(response) {
+
+
+
+               localStorage.setItem("usuarioseleccionado",JSON.stringify(response));
+                   location.href="Menucinema.html" //Si le doy click a la imagen me lleva a butacas
+}, function(error) {
+ console.log(error);
+});
+}
+
+ </script>
+</body>
+</html>

@@ -6,8 +6,8 @@ Guardar(req,res) {
     var claveysaltlocal = administradorinstanciado.setPassword(req.body.CLAVE);
     console.log(claveysaltlocal[0]);
    console.log(req.body.CLAVE);
-	Item.create(
-			{
+  Item.create(
+      {
    NOMBRE: req.body.NOMBRE,
     CLAVE: claveysaltlocal[0],
     EMAIL: req.body.EMAIL,
@@ -15,22 +15,23 @@ Guardar(req,res) {
     ESTADO: req.body.ESTADO,
              SALT: claveysaltlocal[1]
             },
-			function(err, item) {
-				if (err)
+      function(err, item) {
+        if (err)
                     {
-					res.send(err);}
+          res.send(err);}
           else{    
             Item.find(function(err, item) {
-				 	if (err)
-				 		res.send(err)
+          if (err)
+            res.send(err)
 
           for(var ele in item)
           {
             item[ele].SALT= "Que paso amiguito?";
             item[ele].CLAVE = "ayuwuki";
           }
-				  res.json(item);
-				});}}); }
+          res.json(item);
+        });}}); }
+
 
  Modificar(req,res) {
 		Item.update( {_id : req.body._id},

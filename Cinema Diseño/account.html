@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css/account.css">
+	<meta charset="utf-8">
+</head>
+<body>
+   <link href="//db.onlinewebfonts.com/c/a4e256ed67403c6ad5d43937ed48a77b?family=Core+Sans+N+W01+35+Light" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="form.css" type="text/css">
+<div class="body-content">
+  <div class="module">
+    <h1>Crear cuenta</h1>
+    <class="form" action="form.php" method="post" enctype="multipart/form-data" autocomplete="off">
+      <div class="alert alert-error"></div>
+      <input id="Usuario" type="text" placeholder="Usuario" name="username" required />
+      <input id="correo" type="email" placeholder="Correo" name="email" required />
+      <input id="clave" type="password" placeholder="Contraseña" name="password" autocomplete="new-password" required />
+      <div class="avatar"><label>Selecciona tu foto: </label><input id = "imagen" type="file" name="avatar" accept="image/*" required /></div>
+      <input type="submit" value="Registrarse" name="register" class="btn btn-block btn-primary" onclick="botonguardarclick()"/>
+
+  </div>
+</div>
+
+    <script src="jquery/jquery-3.2.1.min.js"></script>
+    <script src="frontend/administradorFE.js"></script>
+    <script type="text/javascript">
+
+    
+   function botonguardarclick() //  Despues de presionar el boton, se viene aqui donde obtiene los valores
+       {
+           var usuarioinstanciado = new ADMINISTRADOR(0, //  Un objeto con todos los atributos que le agrega el usuario
+           document.getElementById("Usuario").value,
+            document.getElementById("correo").value,
+           document.getElementById("clave").value,
+     imagenenbase64
+           );
+
+           usuarioinstanciado.Guardar().then(function(response) {
+console.log("Success!", response);
+       alert("Guardado con exito");
+
+}, function(error) {
+console.error("Failed!", error);
+        alert("Error " + error);
+
+});
+}
+</script>
+
+</body>
+</html>
