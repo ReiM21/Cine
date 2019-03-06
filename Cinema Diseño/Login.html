@@ -19,7 +19,7 @@
 					<input id="contra1" type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
-					<input type="submit" class="button" value="Sign In">
+					<input type="submit" class="button" value="Sign In" onclick="login()"/>
 				</div>
 				<div class="hr"></div>
 				<div class="foot-lnk">
@@ -29,12 +29,13 @@
     <script src="jquery/jquery-3.2.1.min.js"></script>
     <script src="frontend/administradorFE.js"></script>
     <script type="text/javascript">
-    function cargataquilla()
+    function login()
         {
 
 
-             let claseadministradorinstanciada = new ADMINISTRADOR(0,"","contra1",document.getElementById('correo'),"","","");
-               claseadministradorinstanciada.Login().then(function(response) {
+             let administradorinstanciada = new ADMINISTRADOR(0,"","contra1",document.getElementById('correo'),"","","");
+               administradorinstanciada.login().then(function(response) {
+               	alert("Bienvenido");
 
 
 

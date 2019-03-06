@@ -49,7 +49,7 @@ reject(err.message);
 });
 }
 
-Modificar() { //  Las mismas cosas que guardar pero cambia el link al atributo modificar
+login() { //  Las mismas cosas que guardar pero cambia el link al atributo modificar
 
 var objetoaenviar = this;
 // Return a new promise.
@@ -59,7 +59,7 @@ return new Promise(function(resolve, reject) {
 try {
 
        var xhr = new XMLHttpRequest();
-xhr.open('POST', 'http://localhost:8080/api/Modificapelicula');
+xhr.open('POST', 'http://localhost:8080/api/loginadmin');
 xhr.setRequestHeader('Content-Type', 'application/json');
 xhr.onload = function() {
 if (xhr.status === 200) {
